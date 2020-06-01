@@ -65,14 +65,18 @@ java -jar target/shift-0.0.1-SNAPSHOT.jar
 
    [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-6. If you want to insert shift codes from UI, you can access the related UI from the following URL
+6. Following URL provide the available links in Shift Checker
+
+    [http://localhost:8080](http://localhost:8080)
+
+7. If you want to insert shift codes from UI, you can access the related UI from the following URL
 
     [http://localhost:8080/shift](http://localhost:8080/shift)
 
-7. If you want to insert shift groups use the following URL
+8. If you want to insert shift groups use the following URL
  
     [http://localhost:8080/group](http://localhost:8080/group)
 
-8. If you want to assign a shift to a shift Group use the following URL
+9. If you want to assign a shift to a shift Group use the following URL
 
     [http://localhost:8080/shiftGroupPage](http://localhost:8080/shiftGroupPage)
