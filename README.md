@@ -1,6 +1,6 @@
-# Shift Management Application
+# Shift Checker
 
-Shift Application is a RESTful API where several APIs are exposed to add shift codes, group codes and assign shifts to groups and to check if a certain shift belonging to a group is available or not. A separate client application is also built for user to consume the exposed APIs. This repository can be viewed using the following URL
+Shift Checker is a RESTful API where several APIs are exposed to add shift codes, group codes and assign shifts to groups and to check if a certain shift belonging to a group is available or not. A separate client application is also built for user to consume the exposed APIs. This repository can be viewed using the following URL
 
 [https://github.com/HPBmla/Shift-Management](https://github.com/HPBmla/Shift-Management)
 
