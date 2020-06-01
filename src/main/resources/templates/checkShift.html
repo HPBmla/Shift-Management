@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<H1 align="center">Check Shift and Group Availability</H1>
+<div>
+    <!--/*@thymesVar id="AllShiftGroups" type=""*/-->
+    <form action="#" th:action="@{/checkShift}" th:object="${AllShiftGroups}" method="post">
+
+            <!--<label for="shiftCode">Shift</label>
+        <input type="text"  id="shiftCode" name="shiftCode" placeholder="Shift"> <br>
+         <label for="shiftGroupCode">Shift Group</label>
+        <input type="text"  id="shiftGroupCode" name="shiftGroupCode" placeholder="Shift Group"><br>-->
+
+          <label for="shiftCode">Shift Code</label><br>
+        <!--/*@thymesVar id="Shift" type=""*/-->
+        <select  class="form-control" id="shiftCode" name="shiftCode">
+            <option value="">Select Shift Code</option>
+            <!--/*@thymesVar id="shiftList" type=""*/-->
+            <option th:each="shift : ${shiftList}"
+                    th:value="${shift.getCode()}"
+                    th:text="${shift.getCode()}"></option>
+
+        </select><br> <br>
+        <label for="shiftGroupCode">Group Code</label><br>
+        <select class="form-control" id="shiftGroupCode" name="shiftGroupCode">
+
+            <option value="">Select Group Code</option>
+            <!--/*@thymesVar id="groupList" type=""*/-->
+            <!--/*@thymesVar id="getCode" type=""*/-->
+            <option th:each="shiftGroup : ${groupList}"
+                    th:value="${shiftGroup.getCode()}"
+                    th:text="${shiftGroup.getCode()}"></option>
+        </select><br> <br>
+            <input type="submit" value="Check Shift">  
+    </form>
+    <h1 th:text="${result}"></h1>
+</div>
+
+</body>
+</html>

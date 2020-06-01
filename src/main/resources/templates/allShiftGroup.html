@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:c="" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<h1 align="center">Assign Shift To Shift Group</h1>
+  <div>
+<!--/*@thymesVar id="AllShiftGroups" type="AllShiftGroups"*/-->
+<form action="#" th:action="@{/addShiftToGroup}" th:object="${AllShiftGroups}" method="post">
+      
+
+    <label for="shiftCode">Shift Code</label><br>
+    <!--/*@thymesVar id="Shift" type=""*/-->
+    <select  class="form-control" id="shiftCode" name="shiftCode">
+        <option value="">Select Shift Code</option>
+        <option th:each="shift1 : ${shiftList}"
+                th:value="${shift1.getCode()}"
+                th:text="${shift1.getCode()}"></option>
+
+    </select><br> <br>
+    <label for="shiftGroupCode">Group Code</label><br>
+    <select class="form-control" id="shiftGroupCode" name="shiftGroupCode">
+        <option value="">Select Group Code</option>
+        <option th:each="group : ${groupList}"
+                th:value="${group.getCode()}"
+                th:text="${group.getCode()}"></option>
+    </select><br> <br>
+    <input type="submit" value="Add Shift to Group"> 
+</form>
+    <h1 th:text="${result}"></h1>
+</div>
+
+</body>
+</html>

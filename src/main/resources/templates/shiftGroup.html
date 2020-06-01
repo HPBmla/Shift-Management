@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<H1 align="center">Add Shift Group</H1>
+<div>
+
+    <!--/*@thymesVar id="ShiftGroup" type=""*/-->
+    <form action="#" th:action="@{/shiftGroup}" th:object="${ShiftGroup}" method="post">
+
+            <label for="code">Shift Group</label><br>
+            <input type="text"  id="code" name="code" placeholder="Shift Group"> <br><br>
+            <input type="submit" value="Add Shift Group">  
+    </form>
+    <h1 th:text="${result}"></h1>
+
+</div>
+
+</body>
+</html>

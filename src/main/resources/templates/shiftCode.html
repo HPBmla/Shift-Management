@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<H1 align="center">Add Shift</H1>
+<div>
+    <!--/*@thymesVar id="Shift" type=""*/-->
+    <form action="#" th:action="@{/shiftCode}" th:object="${Shift}" method="post">
+
+            <label for="code">Shift</label><br>
+            <input type="text"  id="code" name="code" placeholder="Shift"> <br><br>
+            <input type="submit" value="Add Shift Code">  
+    </form>
+    <h1 th:text="${result}"></h1>
+
+</div>
+
+</body>
+</html>

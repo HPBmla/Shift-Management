@@ -1,0 +1,17 @@
+label
+{
+    font-size: medium;
+
+}
+div
+{
+    alignment: center;
+    background-color: burlywood;
+    margin-left: 600px;
+    padding-left: 20px;;
+    margin-top: 100px;
+}
+body
+{
+    background-color: burlywood;
+}
